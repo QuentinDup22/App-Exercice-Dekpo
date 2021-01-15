@@ -1,17 +1,42 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+  <ion-item>
+    <h1>Hello, welcome in your App : DekpoApp</h1>
+  </ion-item>  
+
+  <ion-card>
+    <img src="../../assets/photos/ALSP transparent.png">
+    <ion-card-header>
+      <ion-card-title>We are proud to announce that we finally made it ! We are available on IOS and Android !</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>This is an Application to help you find your french Basket-Ball Teams, mostly based in Lyon, France. There are a lot of teams you can see, and you can select your favorites to locate them more easily (as you can see on the research bar).</ion-card-content>
+  </ion-card>
+  <ion-card>
+    <img src="../../assets/photos/news.jpg">
+    <ion-card-header>
+      <ion-card-title>Beaking News</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>Our app is available, you can contact us if we forgot your Basket-Ball team, the one you like, or the one you're interested in.</ion-card-content>
+  </ion-card>
+    
+
+  
+  
 </ion-content>

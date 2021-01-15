@@ -1,7 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
     <ion-title>
-      Tab 2
+      Gallery
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +14,31 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Gallery</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-list>
+    <ion-item-sliding *ngFor="let img of photoList">
+      <ion-item-options side="start">
+        <ion-item-option color="danger">
+          Delete
+        </ion-item-option>
+        
+        
+      </ion-item-options>
+      <app-list-item [img]="img">
+      </app-list-item>
+
+      <ion-item-options side="end">
+        <ion-item-option (click)="alert(img.id)">
+          See id
+        </ion-item-option>
+        </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+
 </ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div class="ion-padding">
+<h1>Here there are your favorites</h1>
+<ion-icon name="heart-outline"></ion-icon>
+<h2>You can see all the teams you like</h2>
+</div>
+
+<ion-list>
+ <app-list-item *ngFor="let img of photoList" [img]="img"></app-list-item>
+
+</ion-list>
+
+
+  
+
+</ion-content>
